@@ -1,4 +1,4 @@
-#Sharing style variables between JS and SCSS files
+# Sharing style variables between JS and SCSS files
 
 This is an example project that shows how you're able to share style variables between scss and js files.
 
