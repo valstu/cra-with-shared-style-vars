@@ -10,7 +10,7 @@ I defined the style variables in javascript module `src/constants/styles.js`. Th
 
 ## Example
 If you take a look at the `src/constants/styles.js` file you can notice that I have defined breakpoints on the lines 36-49 like this:
-```
+```js
   '$grid-breakpoints': {
     xs: '0',
     sm: '576px',
@@ -30,7 +30,7 @@ Now if I want to use these already defined values in my styled-components all I 
 
 Here's an example from `App.js`
 
-```
+```js
 import styled from 'styled-components';
 
 const Container = styled.div`
