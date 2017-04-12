@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "bootstrap": "v4.0.0-alpha.6",
+    "node-sass": "^4.5.2",
+    "npm-run-all": "^4.0.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "styled-components": "^1.4.4"
@@ -14,8 +16,11 @@
     "sassport": "^0.8.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-css": "node scripts/sassport",
+    "watch-css": "npm run build-css && chokidar 'src/**/*.scss' 'src/constants/*.js' -c 'npm run build-css'",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
