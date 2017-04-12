@@ -41,5 +41,5 @@ const Container = styled.div`
 `;
 ```
 
-## Testing
+## Test it out on your local environment
 Clone the project and just run `yarn` and `yarn start` to test it out.
